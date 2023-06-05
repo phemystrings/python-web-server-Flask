@@ -1,0 +1,47 @@
+{% extends 'base.html' %} 
+
+{% block title %}Index{% endblock title %}
+
+{% block content %}
+<main>
+  <h1>Web-Server Development in Python</h1>
+  <div class='table-header'>
+    <h2>User Table</h2>
+    <a href='{{url_for('create')}}'>Create New</a>
+  </div>
+    <table style="min-width: 400px">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Profession</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% if context == []%}
+          <tr class='no-data'>
+            <td colspan='4'>NO DATA TO DISPLAY</td>
+          </tr>
+        {% else %}
+        {% for user in context %}
+        <tr>
+          <td>{{user.name}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.profession}}</td>
+          <td>
+            <a href='update/{{user.id}}'>Edit</a>
+            <a href='details/{{user.id}}'>Details</a>
+          </td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+      </tbody>
+    </table>
+    <div class='bottom-nav'>
+      <a href='{{url_for('index')}}'>Home</a>
+    </div>
+</main>
+
+{% endblock content %}
+

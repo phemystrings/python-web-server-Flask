@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block title %}Update{% endblock title %} {%block
+content %}
+<main>
+    <div class='table-header'>
+        <h2>Update</h2>
+        <a href='{{url_for('index')}}'>Back to Table</a>
+    </div>
+  <form method="post">
+    <h2>Update Form</h2>
+    <p>Kindly edit your details below.</p>
+    <input type="text" placeholder="Name" name="name" title="name" value='{{data.name}} '/>
+    <input type="email" placeholder="E-Mail" name="email" title="email" value='{{data.email}}' />
+    <input
+      type="text"
+      placeholder="Profession"
+      name="profession"
+      title="profession"
+      value='{{data.profession}}'
+    />
+    <button type="submit">Update</button>
+  </form>
+</main>
+{% endblock content %}

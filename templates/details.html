@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Details
+{% endblock %}
+
+{% block content %}
+    <main>
+        <article>
+            <div class='table-header'>
+                <h2>Details Page</h2>
+                <a href='{{url_for('index')}}'>Back to Table</a>
+            </div>
+            <ul>
+                <li>{{data.name}}</li>
+                <li>{{data.email}}</li>
+                <li>{{data.profession}}</li>
+            </ul>
+            <section class='details'>
+                <a href='../update/{{data.id}}'>Edit</a>
+                <a href='../delete/{{data.id}}'>Delete</a>
+            </section>
+        </article>
+    </main>
+{% endblock %}

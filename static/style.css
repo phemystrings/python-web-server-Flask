@@ -1,0 +1,136 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+main {
+  padding: 0.5rem 2.5rem;
+}
+main ul {
+  list-style: none;
+  margin-bottom: 0.9rem;
+  width: 300px;
+}
+main ul li {
+  padding: 0.5rem 0;
+}
+main h1 {
+  text-align: center;
+  color: rgb(112, 112, 170);
+  margin-bottom: 1.5rem;
+}
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 0.8rem;
+}
+.bottom-nav {
+  margin-top: 0.8rem;
+  max-width: fit-content;
+  font-weight: 500;
+}
+.table-header h2 {
+  color: rgb(129, 129, 184);
+}
+.table-header a,
+.details a {
+  background-color: rgb(160, 160, 221);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: rgb(1, 1, 37);
+  transition: all 0.2s ease;
+}
+.table-header a:hover,
+.details a:hover {
+  background-color: rgb(47, 47, 109);
+  color: white;
+  transform: scale(1.02);
+}
+table {
+  border-collapse: collapse;
+  background-color: rgb(168, 168, 216);
+  width: min(600px, 100%);
+  font-size: 0.95rem;
+}
+.no-data {
+  text-align: center;
+  background-color: rgb(223, 223, 243);
+}
+table th {
+  background-color: rgb(85, 85, 236);
+  padding: 0.3rem 0;
+}
+table tbody tr:nth-child(even) {
+  background-color: rgb(207, 207, 236);
+}
+table td {
+  padding: 0.5rem;
+}
+
+table a {
+  text-decoration: none;
+  background-color: rgb(144, 144, 194);
+  padding: 0.25rem;
+  border-radius: 0.2rem;
+  color: rgb(2, 2, 66);
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+}
+table a:hover {
+  background-color: rgb(129, 129, 240);
+  color: white;
+  font-size: 0.8rem;
+}
+form {
+  display: grid;
+  min-width: 270px;
+  row-gap: 0.75rem;
+  background-color: rgb(170, 170, 224);
+  padding: 0.9rem 0.5rem;
+  border-radius: 0.5rem;
+  color: rgb(1, 1, 37);
+  box-shadow: 2px 2px 1px rgba(124, 122, 122, 0.918);
+}
+form h2 {
+  padding-block: 0.3rem;
+  text-shadow: 2px 2px 1px rgba(218, 218, 235, 0.911);
+}
+form h2::after {
+  content: "";
+  margin-top: 0.2rem;
+  height: 3px;
+  width: 40px;
+  display: block;
+  background-color: rgb(1, 1, 37);
+}
+form :is(input, button) {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 1px 2px 1px rgba(126, 124, 124, 0.918);
+}
+form input:focus {
+  outline: 1.9px solid rgb(1, 1, 37);
+}
+form button {
+  background-color: rgb(1, 1, 37);
+  color: white;
+  cursor: pointer;
+  box-shadow: 1px 2px 1px rgba(126, 124, 124, 0.918);
+  transition: scale 0.5s ease;
+}
+form button:hover {
+  background-color: rgb(23, 23, 78);
+  scale: 1.01;
+}
