@@ -8,3 +8,6 @@ Prerequisites as Follows:
 
 To Run the app:
 use the code in your terminal within the project directory: flask run --debug
+Notes:
+A json file is used as a database storage
+A Django version of this project is also in my repository
